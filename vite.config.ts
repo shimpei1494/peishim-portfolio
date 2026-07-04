@@ -6,6 +6,7 @@ export default defineConfig({
   },
   lint: {
     ignorePatterns: ["**/*.md", ".claude/**"],
+    plugins: ["oxc", "typescript", "unicorn", "react", "nextjs", "jsx-a11y"],
     options: {
       typeAware: true,
       typeCheck: true,
