@@ -33,7 +33,7 @@ export interface HobbyCategory {
 export const hobbyCategories: HobbyCategory[] = [
   {
     id: "snowboarding",
-    title: "スノーボード",
+    title: "Snowboard",
     description:
       "学生時代はシーズン30回ペースで滑りに行っていました。グラトリ多め。社会人になってからは年数回ほど。",
     items: [
@@ -46,15 +46,15 @@ export const hobbyCategories: HobbyCategory[] = [
       {
         id: "snowboard-circle-2018",
         type: "youtube",
-        title: "大学のサークルで作成した動画（2018-2019シーズン）",
+        title: "大学のサークル動画（2018-2019シーズン）",
         videoId: "p98DfFvn15Q",
       },
     ],
   },
   {
     id: "sauna",
-    title: "サウナ",
-    description: "特に良かった場所を抜粋。",
+    title: "Sauna",
+    description: "特に良かったサウナ、ユニークだったサウナを紹介。",
     items: [
       {
         id: "sauna-rakan",
@@ -84,8 +84,8 @@ export const hobbyCategories: HobbyCategory[] = [
   },
   {
     id: "anime",
-    title: "アニメ",
-    description: "色々見ていますが、期によって面白さも変わるので難しいところ。",
+    title: "Anime",
+    description: "1個しか挙げてないですが、色々見てます！",
     items: [
       {
         id: "anime-rezero",
@@ -96,15 +96,16 @@ export const hobbyCategories: HobbyCategory[] = [
     ],
   },
   {
-    id: "idol",
-    title: "アイドル",
-    description: "推しアイドル。ライブが楽しくてよく行っています。",
+    id: "live",
+    title: "Live",
+    description: "ライブに行くのも好きです。最近はアイドルのライブばかり行っています。",
     items: [
       {
-        id: "idol-cutie-street",
+        id: "cutie-street",
         type: "link",
         title: "CUTIE STREET",
         url: "https://cutiestreet.asobisystem.com/",
+        description: "推しアイドル。全員かわいくて、ライブもめちゃ楽しい。",
       },
     ],
   },
