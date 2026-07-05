@@ -14,11 +14,13 @@ export interface Work {
 
 export const works: Work[] = [
   {
-    id: "taskflow",
-    title: "TaskFlow",
-    description: "チーム向けタスク管理アプリ",
-    tags: ["Next.js", "Azure"],
-    period: "2026-04",
+    id: "poketype-dojo",
+    title: "PokéType Dojo",
+    description:
+      "ポケモンのタイプ相性を楽しく学べる学習アプリ。相性チェッカー・クイズ・全1025匹対応の図鑑に加え、あいまいな質問からポケモンの候補を提示する「AIポケモン相談」機能も搭載。",
+    tags: ["TanStack Start", "React", "TypeScript", "AI"],
+    demoUrl: "https://poketype-dojo.netlify.app",
+    period: "2026-06",
   },
   {
     id: "recipestock",
