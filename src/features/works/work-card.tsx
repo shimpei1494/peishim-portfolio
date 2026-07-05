@@ -12,9 +12,11 @@ interface WorkCardProps {
   work: Work;
   /** プレースホルダ配色の切り替え用インデックス */
   index?: number;
+  /** 制作時期・デモ / GitHub リンクを表示する（Works ページ用） */
+  showMeta?: boolean;
 }
 
-export function WorkCard({ work, index = 0 }: WorkCardProps) {
+export function WorkCard({ work, index = 0, showMeta = false }: WorkCardProps) {
   return (
     <article className="overflow-hidden rounded-2xl border-2 border-ink bg-white shadow-[6px_6px_0_var(--ink)] transition-transform hover:-translate-y-1">
       <div
@@ -49,6 +51,35 @@ export function WorkCard({ work, index = 0 }: WorkCardProps) {
             </span>
           ))}
         </div>
+        {showMeta && (
+          <div className="mt-4 flex items-center justify-between gap-3 border-t-2 border-divider-soft pt-3">
+            <span className="font-mono text-[11px] text-muted-foreground">
+              {work.period.replace("-", ".")}
+            </span>
+            <div className="flex gap-2 font-mono text-[11px] font-semibold">
+              {work.demoUrl && (
+                <a
+                  href={work.demoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-full bg-accent-pop px-3 py-1 text-white transition-transform hover:-translate-y-0.5"
+                >
+                  Demo <span aria-hidden>↗</span>
+                </a>
+              )}
+              {work.githubUrl && (
+                <a
+                  href={work.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-full border-2 border-ink px-3 py-1 transition-transform hover:-translate-y-0.5"
+                >
+                  GitHub <span aria-hidden>↗</span>
+                </a>
+              )}
+            </div>
+          </div>
+        )}
       </div>
     </article>
   );
