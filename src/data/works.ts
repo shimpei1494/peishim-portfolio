@@ -19,6 +19,7 @@ export const works: Work[] = [
     description:
       "ポケモンのタイプ相性を楽しく学べる学習アプリ。相性チェッカー・クイズ・全1025匹対応の図鑑に加え、あいまいな質問からポケモンの候補を提示する「AIポケモン相談」機能も搭載。",
     tags: ["TanStack Start", "React", "TypeScript", "AI"],
+    imageUrl: "/images/works/poketype-dojo-og-image.png",
     demoUrl: "https://poketype-dojo.netlify.app",
     period: "2026-06",
   },
