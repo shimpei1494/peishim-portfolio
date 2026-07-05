@@ -2,10 +2,10 @@ import { defineConfig } from "vite-plus";
 
 export default defineConfig({
   fmt: {
-    ignorePatterns: ["**/*.md", ".claude/**"],
+    ignorePatterns: ["**/*.md", ".claude/**", "docs/**"],
   },
   lint: {
-    ignorePatterns: ["**/*.md", ".claude/**"],
+    ignorePatterns: ["**/*.md", ".claude/**", "docs/**"],
     plugins: ["oxc", "typescript", "unicorn", "react", "nextjs", "jsx-a11y"],
     options: {
       typeAware: true,
