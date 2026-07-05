@@ -23,12 +23,12 @@ export const profile: Profile = {
   alias: "PEISHIM",
   title: "Web エンジニア",
   catchphrase: "つくって、ためして、発信する。",
-  lead: "Web エンジニア。TypeScript と Next.js でアプリを作り、Zenn で学びを発信しています。",
+  lead: "Web エンジニア。TypeScript と Python でアプリを作ったり、Zenn で学びを発信しています。",
   avatar: "/images/profile.jpg",
-  heroStickers: ["TypeScript", "Next.js", "Azure"],
+  heroStickers: ["TypeScript", "Python", "AI Agent"],
   socials: [
-    { label: "GitHub", url: "https://github.com/peishim" },
+    { label: "GitHub", url: "https://github.com/shimpei1494" },
     { label: "Zenn", url: "https://zenn.dev/peishim" },
-    { label: "X", url: "https://x.com/peishim" },
+    { label: "X", url: "https://x.com/peishim1494" },
   ],
 };

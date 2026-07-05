@@ -52,12 +52,10 @@ export const skillCategories: SkillCategory[] = [
 
 /** Top のマーキーに流すスキル一覧（デザイン準拠の並び） */
 export const marqueeSkills: string[] = [
-  "TypeScript",
   "Next.js",
+  "Tanstack Start",
   "React",
+  "FastAPI",
   "Azure",
-  "Node.js",
-  "Tailwind CSS",
-  "Motion",
-  "OpenAI API",
+  "AI Agent",
 ];
