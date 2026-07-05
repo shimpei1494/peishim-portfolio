@@ -17,8 +17,19 @@ interface WorkCardProps {
 }
 
 export function WorkCard({ work, index = 0, showMeta = false }: WorkCardProps) {
+  const primaryUrl = work.demoUrl ?? work.githubUrl;
+
   return (
-    <article className="overflow-hidden rounded-2xl border-2 border-ink bg-white shadow-[6px_6px_0_var(--ink)] transition-transform hover:-translate-y-1">
+    <article className="relative overflow-hidden rounded-2xl border-2 border-ink bg-white shadow-[6px_6px_0_var(--ink)] transition-transform hover:-translate-y-1">
+      {primaryUrl && (
+        <a
+          href={primaryUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="absolute inset-0 z-10"
+          aria-label={`${work.title} を開く`}
+        />
+      )}
       <div
         className="relative grid h-[150px] place-items-center overflow-hidden"
         style={
@@ -51,7 +62,7 @@ export function WorkCard({ work, index = 0, showMeta = false }: WorkCardProps) {
           ))}
         </div>
         {showMeta && (
-          <div className="mt-4 flex items-center justify-between gap-3 border-t-2 border-divider-soft pt-3">
+          <div className="relative z-20 mt-4 flex items-center justify-between gap-3 border-t-2 border-divider-soft pt-3">
             <span className="font-mono text-[11px] text-muted-foreground">
               {work.period.replace("-", ".")}
             </span>
