@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { IBM_Plex_Mono, Zen_Kaku_Gothic_New } from "next/font/google";
 import { Footer } from "@/components/common/footer";
 import { Header } from "@/components/common/header";
+import { SITE_NAME, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const zenKaku = Zen_Kaku_Gothic_New({
@@ -16,13 +17,29 @@ const ibmPlexMono = IBM_Plex_Mono({
   subsets: ["latin"],
 });
 
+const DESCRIPTION =
+  "Peishim のポートフォリオサイト。Web エンジニアとして、つくって、ためして、発信する。";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "peishim.dev",
-    template: "%s | peishim.dev",
+    default: SITE_NAME,
+    template: `%s | ${SITE_NAME}`,
   },
-  description:
-    "Peishim のポートフォリオサイト。Web エンジニアとして、つくって、ためして、発信する。",
+  description: DESCRIPTION,
+  openGraph: {
+    type: "website",
+    locale: "ja_JP",
+    url: "/",
+    siteName: SITE_NAME,
+    title: SITE_NAME,
+    description: DESCRIPTION,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_NAME,
+    description: DESCRIPTION,
+  },
 };
 
 export default function RootLayout({

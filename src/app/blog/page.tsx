@@ -1,13 +1,10 @@
-import type { Metadata } from "next";
 import { AnimatedSection } from "@/components/common/animated-section";
 import { PageHeader } from "@/components/common/page-header";
 import { ArticleSearch } from "@/features/blog/article-search";
+import { buildMetadata } from "@/lib/site";
 import { fetchZennArticles, getZennProfileUrl } from "@/lib/zenn";
 
-export const metadata: Metadata = {
-  title: "Blog",
-  description: "Zenn に投稿した技術記事の一覧。",
-};
+export const metadata = buildMetadata("Blog", "Zenn に投稿した技術記事の一覧。");
 
 // Zenn 記事一覧を ISR で1時間ごとに再検証する
 export const revalidate = 3600;
