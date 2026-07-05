@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# peishim-portfolio
 
-## Getting Started
+Web エンジニア Peishim のポートフォリオサイト。Next.js 16（App Router）製。
 
-First, run the development server:
+詳しい仕様は [docs/portfolio-v2-spec.md](docs/portfolio-v2-spec.md) を参照してください。
+
+## 技術スタック
+
+- **フレームワーク**: Next.js 16（App Router / React Server Components）
+- **言語**: TypeScript（strict）
+- **スタイリング**: Tailwind CSS v4
+- **UI コンポーネント**: shadcn/ui（コードコピー方式、プリミティブは Base UI）
+- **アニメーション**: Motion
+- **Lint / Format**: Oxlint + Oxfmt（[Vite+](https://www.npmjs.com/package/vite-plus) 経由）
+- **ホスティング**: Vercel
+- **コンテンツ**: リポジトリ内の型付き TS ファイル（`src/data/`）+ Zenn API 自動取得（Blog）
+
+## セットアップ
+
+依存関係のインストール・Lint・フォーマット・型チェックは [Vite+](https://www.npmjs.com/package/vite-plus)（`vp`）に統一しています。`next dev` / `next build` はそのまま使います。
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+vp install       # 依存関係のインストール
+vp run dev       # 開発サーバー起動（next dev のラッパー）
+vp check         # フォーマット + Lint + 型チェック
+vp check --fix   # フォーマット差分の自動修正
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+pre-commit フックでステージ済みファイルに自動で `vp check --fix` が実行されます（`vp config` 済み）。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 環境変数
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+`.env.example` を参照してください。いずれも未設定でも動作します（フォールバック値あり）。
 
-## Learn More
+| 変数名 | 用途 | 未設定時のフォールバック |
+|---|---|---|
+| `NEXT_PUBLIC_SITE_URL` | OGP・sitemap・robots.txt の絶対URL生成 | `https://peishim-portfolio.vercel.app` |
+| `ZENN_USERNAME` | Blog ページの Zenn 記事取得先ユーザー名 | `peishim` |
 
-To learn more about Next.js, take a look at the following resources:
+## ページ構成
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+/          Top
+/about     プロフィール・経歴・スキル
+/works     制作物一覧
+/blog      Zenn 記事一覧（自動連携・ISR）
+/hobby     趣味
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## デプロイ
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[Vercel](https://vercel.com/) にこのリポジトリを接続するだけでデプロイできます（追加設定不要）。環境変数を使う場合は Vercel のプロジェクト設定で上記の変数を設定してください。
