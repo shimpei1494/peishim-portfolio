@@ -17,10 +17,19 @@ export function AboutIntro() {
           />
         </div>
         <div className="text-center md:text-left">
-          <p className="mb-3 text-xl leading-relaxed font-bold md:text-2xl">
+          <p className="mb-4 text-xl leading-relaxed font-bold md:text-2xl">
             {profile.catchphrase}
           </p>
-          <p className="leading-[1.9] text-muted-foreground">{profile.lead}</p>
+          <div className="space-y-3 text-left">
+            {profile.bio.map((paragraph) => (
+              <p
+                key={paragraph}
+                className="text-sm leading-[1.9] text-muted-foreground md:text-base"
+              >
+                {paragraph}
+              </p>
+            ))}
+          </div>
         </div>
       </div>
     </AnimatedSection>

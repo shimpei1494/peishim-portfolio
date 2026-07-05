@@ -18,34 +18,40 @@ export const skillCategories: SkillCategory[] = [
     id: "frontend",
     title: "Frontend",
     skills: [
-      { name: "TypeScript", level: 4 },
+      { name: "TypeScript", level: 5, note: "得意言語" },
       { name: "React", level: 4 },
       { name: "Next.js", level: 4 },
-      { name: "Tailwind CSS", level: 4 },
+      { name: "Tailwind CSS", level: 3 },
     ],
   },
   {
     id: "backend",
     title: "Backend",
     skills: [
-      { name: "Node.js", level: 3 },
+      { name: "Python", level: 5, note: "得意言語" },
+      { name: "FastAPI", level: 4 },
       { name: "Ruby on Rails", level: 3 },
+      { name: "Java / Spring Boot", level: 2 },
     ],
   },
   {
     id: "cloud",
     title: "Cloud (Azure)",
     skills: [
-      { name: "Azure App Service", level: 3 },
-      { name: "Azure Functions", level: 3 },
+      { name: "Azure OpenAI", level: 4 },
+      { name: "Cosmos DB", level: 4 },
+      { name: "App Service / Functions", level: 4 },
+      { name: "AI Search", level: 3 },
     ],
   },
   {
-    id: "ai-tools",
-    title: "AI・ツール",
+    id: "ai",
+    title: "AI",
     skills: [
-      { name: "OpenAI API", level: 3 },
+      { name: "RAG", level: 4 },
+      { name: "AI エージェント開発", level: 4 },
       { name: "Claude Code", level: 4 },
+      { name: "GitHub Copilot", level: 4 },
     ],
   },
 ];

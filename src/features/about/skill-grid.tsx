@@ -37,7 +37,14 @@ export function SkillGrid() {
             <ul className="space-y-3">
               {category.skills.map((skill) => (
                 <li key={skill.name} className="flex items-center justify-between gap-4">
-                  <span className="text-sm font-bold">{skill.name}</span>
+                  <span className="text-sm font-bold">
+                    {skill.name}
+                    {skill.note && (
+                      <span className="ml-2 rounded px-1.5 py-0.5 font-mono text-[10px] font-medium bg-tag">
+                        {skill.note}
+                      </span>
+                    )}
+                  </span>
                   <SkillLevelMeter level={skill.level} />
                 </li>
               ))}
