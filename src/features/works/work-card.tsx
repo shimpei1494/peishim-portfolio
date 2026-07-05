@@ -20,7 +20,7 @@ export function WorkCard({ work, index = 0, showMeta = false }: WorkCardProps) {
   return (
     <article className="overflow-hidden rounded-2xl border-2 border-ink bg-white shadow-[6px_6px_0_var(--ink)] transition-transform hover:-translate-y-1">
       <div
-        className="grid h-[150px] place-items-center"
+        className="relative grid h-[150px] place-items-center overflow-hidden"
         style={
           work.imageUrl
             ? undefined
@@ -31,9 +31,8 @@ export function WorkCard({ work, index = 0, showMeta = false }: WorkCardProps) {
           <Image
             src={work.imageUrl}
             alt={`${work.title} のスクリーンショット`}
-            width={600}
-            height={300}
-            className="size-full object-cover"
+            fill
+            className="object-cover"
           />
         ) : (
           <span className="font-mono text-xs text-muted-foreground">
