@@ -29,7 +29,6 @@ export const profile: Profile = {
   socials: [
     { label: "GitHub", url: "https://github.com/peishim" },
     { label: "Zenn", url: "https://zenn.dev/peishim" },
-    { label: "YouTube", url: "https://www.youtube.com/@peishim" },
     { label: "X", url: "https://x.com/peishim" },
   ],
 };
