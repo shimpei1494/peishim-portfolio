@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Mono, Zen_Kaku_Gothic_New } from "next/font/google";
+import { Footer } from "@/components/common/footer";
+import { Header } from "@/components/common/header";
 import "./globals.css";
 
 const zenKaku = Zen_Kaku_Gothic_New({
@@ -30,7 +32,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja" className={`${zenKaku.variable} ${ibmPlexMono.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Header />
+        <main className="flex-1">{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }
