@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { AnimatedSection } from "@/components/common/animated-section";
 import { PageHeader } from "@/components/common/page-header";
-import { ArticleList } from "@/features/blog/article-list";
+import { ArticleSearch } from "@/features/blog/article-search";
 import { fetchZennArticles, getZennProfileUrl } from "@/lib/zenn";
 
 export const metadata: Metadata = {
@@ -23,7 +23,7 @@ export default async function BlogPage() {
         description="Zenn に投稿した技術記事です。新しい記事は自動で反映されます。"
       />
       <AnimatedSection className="mx-auto max-w-6xl px-5 py-9 pb-14 md:px-12 md:py-14 md:pb-20">
-        <ArticleList articles={articles} />
+        <ArticleSearch articles={articles} />
         <p className="mt-6 text-right">
           <a
             href={getZennProfileUrl()}
