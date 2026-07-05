@@ -66,9 +66,11 @@ export function WorkCard({ work, index = 0, showMeta = false }: WorkCardProps) {
             <span className="font-mono text-[11px] text-muted-foreground">
               {work.period.replace("-", ".")}
             </span>
-            {/* カード全体が primaryUrl（demoUrl 優先）へのリンクになっているため、
-                githubUrl がその代替先として別に存在する場合のみボタンを出す */}
-            {work.demoUrl && work.githubUrl && (
+            {/* カード全体は primaryUrl（demoUrl 優先）へのリンクになっているため、
+                githubUrl があれば常にボタンとして表示する
+                （demoUrl がない場合はカードの遷移先と同じだが、リポジトリへの
+                明示的な導線として残す） */}
+            {work.githubUrl && (
               <a
                 href={work.githubUrl}
                 target="_blank"
