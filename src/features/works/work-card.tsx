@@ -66,28 +66,18 @@ export function WorkCard({ work, index = 0, showMeta = false }: WorkCardProps) {
             <span className="font-mono text-[11px] text-muted-foreground">
               {work.period.replace("-", ".")}
             </span>
-            <div className="flex gap-2 font-mono text-[11px] font-semibold">
-              {work.demoUrl && (
-                <a
-                  href={work.demoUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-full bg-accent-pop px-3 py-1 text-white transition-transform hover:-translate-y-0.5"
-                >
-                  Demo <span aria-hidden>↗</span>
-                </a>
-              )}
-              {work.githubUrl && (
-                <a
-                  href={work.githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-full border-2 border-ink px-3 py-1 transition-transform hover:-translate-y-0.5"
-                >
-                  GitHub <span aria-hidden>↗</span>
-                </a>
-              )}
-            </div>
+            {/* カード全体が primaryUrl（demoUrl 優先）へのリンクになっているため、
+                githubUrl がその代替先として別に存在する場合のみボタンを出す */}
+            {work.demoUrl && work.githubUrl && (
+              <a
+                href={work.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full border-2 border-ink px-3 py-1 font-mono text-[11px] font-semibold transition-transform hover:-translate-y-0.5"
+              >
+                GitHub <span aria-hidden>↗</span>
+              </a>
+            )}
           </div>
         )}
       </div>

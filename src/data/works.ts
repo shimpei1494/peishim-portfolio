@@ -21,6 +21,7 @@ export const works: Work[] = [
     tags: ["TanStack Start", "React", "TypeScript", "AI"],
     imageUrl: "/images/works/poketype-dojo-og-image.png",
     demoUrl: "https://poketype-dojo.netlify.app",
+    githubUrl: "https://github.com/shimpei1494/poketype-dojo",
     period: "2026-06",
   },
   {
