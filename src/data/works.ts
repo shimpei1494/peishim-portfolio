@@ -24,18 +24,4 @@ export const works: Work[] = [
     githubUrl: "https://github.com/shimpei1494/poketype-dojo",
     period: "2026-06",
   },
-  {
-    id: "recipestock",
-    title: "RecipeStock",
-    description: "レシピを保存・検索できるアプリ",
-    tags: ["React", "Supabase"],
-    period: "2025-11",
-  },
-  {
-    id: "devlog-cli",
-    title: "DevLog CLI",
-    description: "開発ログを記録する CLI ツール",
-    tags: ["Node.js", "TypeScript"],
-    period: "2025-06",
-  },
 ];
