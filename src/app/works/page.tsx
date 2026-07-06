@@ -1,13 +1,10 @@
-import type { Metadata } from "next";
 import { AnimatedSection } from "@/components/common/animated-section";
 import { PageHeader } from "@/components/common/page-header";
 import { works } from "@/data/works";
 import { WorkCard } from "@/features/works/work-card";
+import { buildMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Works",
-  description: "Peishim が制作・公開したアプリやツールの一覧。",
-};
+export const metadata = buildMetadata("Works", "Peishim が制作・公開したアプリやツールの一覧。");
 
 export default function WorksPage() {
   return (
