@@ -1,7 +1,11 @@
 import Link from "next/link";
-import { buildMetadata } from "@/lib/site";
+import type { Metadata } from "next";
 
-export const metadata = buildMetadata("404", "お探しのページが見つかりませんでした。");
+export const metadata: Metadata = {
+  title: "404",
+  description: "お探しのページが見つかりませんでした。",
+  robots: { index: false, follow: false },
+};
 
 export default function NotFound() {
   return (

@@ -3,7 +3,7 @@ import { hobbyCategories } from "@/data/hobby";
 import { HobbyCategorySection } from "@/features/hobby/hobby-category-section";
 import { buildMetadata } from "@/lib/site";
 
-export const metadata = buildMetadata("Hobby", "Peishim の趣味。YouTube 動画など。");
+export const metadata = buildMetadata("Hobby", "Peishim の趣味。YouTube 動画など。", "/hobby");
 
 export default function HobbyPage() {
   return (

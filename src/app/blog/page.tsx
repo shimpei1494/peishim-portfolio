@@ -4,7 +4,7 @@ import { ArticleSearch } from "@/features/blog/article-search";
 import { buildMetadata } from "@/lib/site";
 import { fetchZennArticles, getZennProfileUrl } from "@/lib/zenn";
 
-export const metadata = buildMetadata("Blog", "Zenn に投稿した技術記事の一覧。");
+export const metadata = buildMetadata("Blog", "Zenn に投稿した技術記事の一覧。", "/blog");
 
 // Zenn 記事一覧を ISR で1時間ごとに再検証する
 export const revalidate = 3600;
