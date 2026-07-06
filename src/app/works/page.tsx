@@ -4,7 +4,11 @@ import { works } from "@/data/works";
 import { WorkCard } from "@/features/works/work-card";
 import { buildMetadata } from "@/lib/site";
 
-export const metadata = buildMetadata("Works", "Peishim が制作・公開したアプリやツールの一覧。");
+export const metadata = buildMetadata(
+  "Works",
+  "Peishim が制作・公開したアプリやツールの一覧。",
+  "/works",
+);
 
 export default function WorksPage() {
   return (
