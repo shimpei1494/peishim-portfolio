@@ -11,12 +11,14 @@ const zenKaku = Zen_Kaku_Gothic_New({
   variable: "--font-zen-kaku",
   weight: ["400", "500", "700", "900"],
   subsets: ["latin"],
+  preload: false,
 });
 
 const ibmPlexMono = IBM_Plex_Mono({
   variable: "--font-ibm-plex-mono",
   weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
+  preload: false,
 });
 
 const DESCRIPTION =
