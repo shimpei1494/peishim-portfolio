@@ -14,6 +14,17 @@ export interface Work {
 
 export const works: Work[] = [
   {
+    id: "risk-kurabe",
+    title: "TOKYOりすくらべ",
+    description:
+      "2026年の東京オープンデータハッカソン応募時に制作した災害リスク比較アプリ。公開データをもとに、関東1都6県の洪水浸水リスクと東京都の地震に関する地域危険度を最大3地点で比較。地図表示やAIによる説明にも対応。",
+    tags: ["TanStack Start", "React", "TypeScript", "MapLibre GL", "Cloudflare"],
+    imageUrl: "/images/works/risk-kurabe-og-image.jpg",
+    demoUrl: "https://risk-kurabe.peishim.workers.dev",
+    githubUrl: "https://github.com/shimpei1494/risk-kurabe",
+    period: "2026",
+  },
+  {
     id: "poketype-dojo",
     title: "PokéType Dojo",
     description:
